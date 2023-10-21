@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chessboard</title>
+</head>
+<body>
+    <div class="board">
+        <!-- Create the chessboard cells using a loop -->
+        <?php
+        $letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+        for ($row = 8; $row >= 1; $row--) {
+            for ($col = 0; $col < 8; $col++) {
+                $cellColor = ($row + $col) % 2 == 0 ? 'white' : 'black';
+        ?>
+        <div class="<?= $cellColor ?>"><?=$letters[$col] . $row?></div>
+        <?php
+            }
+        }
+        ?>
+    </div>
+</body>
+</html>
