@@ -8,18 +8,12 @@
 </head>
 <body>
     <div class="board">
-        <!-- Create the chessboard cells using a loop -->
-        <?php
-        $letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-        for ($row = 8; $row >= 1; $row--) {
-            for ($col = 0; $col < 8; $col++) {
-                $cellColor = ($row + $col) % 2 == 0 ? 'white' : 'black';
-        ?>
-        <div class="<?= $cellColor ?>"><?=$letters[$col] . $row?></div>
-        <?php
-            }
-        }
-        ?>
+        <table>
+            <row>
+                <p>Random Image</p>
+                <img src="https://picsum.photos/536/354">
+            </row>
+        </table>
     </div>
 </body>
 </html>
